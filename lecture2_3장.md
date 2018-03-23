@@ -285,7 +285,7 @@ deepPick('data.info.fullname.first', test);     //Dan
 
 * 여러 순수함수들이 합쳐져서 함수형 프로그래밍이 가능하다.
 * 각 함수를 서로 연쇄적으로 또는 병렬로 호출하거나 여러 작은 함수를 조합해서 더 큰 함수로 만드는 과정을 반복해서 전체 애플리케이션을 구축
-* jquery에서 사용하는 채이닝 방법도 하나의 합셩의 예
+* jquery에서 사용하는 채이닝 방법도 하나의 합의 예
 ```javascript
 // 나중에 저런게 20개가 된다면.......
 const both = date => appendAMPM(civilianHours(date));
