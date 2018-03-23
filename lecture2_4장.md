@@ -23,9 +23,9 @@
         * 랜더 트리를 기반으로 각 노드가 화면에 정확한 위치에 표시되도록 배치하는 과정
     * repaint
         * reflow를 통해서 배치된 노드들을 가로지르며 그리는 과정으로 visibility, outline, background-color 와 같은 시각적 속성에 해당 정보를 입히는 과정
-    * webkit 엔진
+    * webkit 엔진   
     ![](https://cloud.githubusercontent.com/assets/12269489/16250793/4b560696-385b-11e6-8706-e30da99f8195.png)
-    * Gecko 엔진
+    * Gecko 엔진   
     ![](https://cloud.githubusercontent.com/assets/12269489/16250804/5d499958-385b-11e6-9b84-9c0115923ba0.jpg)
 * 이런 부분을 다 신경써서 프로그램을 해야 성능 문제를 해결...
 * 가상 DOM을 사용할 경우 가상 DOM을 변경할 경우 최적화 되는 방법을 찾아서 React에서 자동으로 DOM을 변경해준다.(자세한 건 뒤에 다시..)
