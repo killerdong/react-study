@@ -133,8 +133,8 @@ React.createElement(
 ## 4.7 리엑트 컴포넌트
 
 * 모든 UI는 여러 가지 부분으로 이루어진다.
-* React에서는 이러한 부분을 컴포넌트라고 말한다.
-!()[https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png]
+* React에서는 이러한 부분을 컴포넌트라고 말한다.   
+![](https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png)
 * props 를 이용해서 UI를 만들 때 사용하는 로직과 데이터를 분리할 수 있음
 * 컴포넌트를 구성할 수 있는 방법은 총 3가지가 있다.
 
