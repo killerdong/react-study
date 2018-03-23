@@ -10,6 +10,7 @@
     * 추상화를 식별해서 함수로 만든다.
     * 기존 함수를 이용해서 더 복잡한 추상화를 만든다.
     * 기존 함수를 다른 함수에 제공해서 더 복잡한 추상화를 만든다.
+    말이 참 아렵다는.. 
 
 * 1급시민(1급함수)
     * 숫자를 변수에 저장하듯이 함수를 변수에 저장할 수 있다.
@@ -39,6 +40,7 @@
 
     return () => 42;
     ```
+    위와 같은 특징을 가지는 것들을 1급 ... 라고 부른다. 자바스크립트에서는 함수가 위의 특정을 가지고 있기 때문에 1급 함수라고 부른다.
 
 * 고차 함수
     * 1급 함수 중에서 아래 특징을 가지면 고차 함수
@@ -53,7 +55,8 @@
 
 ### 명령형 프로그래밍(imperative programming)
 * 코드가 원하는 결과를 달성해나가는 과정에만 관심을 두고 프로그래밍
-* how
+* 이것을 해결하기 위해서 `어떻게` 이 것을 처리하는 관점
+* 사람이 이해하기 위해서는 영어 문장 해석 하듯이 해석을 해야 함...
 ```javascript
 const string = 'This is the midday show with Cheryl Waters';
 let urlFriendly = '';
@@ -71,16 +74,20 @@ console.log(urlFriendly);
 
 ### 선언적 프로그래밍(declarative programming)
 * 어떤 일이 발생해야 하는지 기술을 하고, 실제로 그 작업을 처리하는 방법은 추상화로 아랫단에 감춰진다.
+* 이것을 해결하기 위해서 `무엇을` 해야 하는 것에 관점
+* 추상화된 이름만으로 무엇이 동작할 수 있는 있는 바로 추론이 가능
 * 이름이 해당 기능을 전체적으로 추상화 할 수 있도록 잘 지어야 한다.
 * 영어를 잘해야 한다..(....)
-* what??
 ```javascript
 const string = 'This is the midday show with Cheryl Waters';
 
-const replaceChar = (c, ic, rl) => c === ic ? rl : c;
-const replaceString = (str, replaceChar) => Array.prototype.reduce.call(str, (out, char) => out + replaceChar(char,' ', '-'), '');
-
 const urlFriendly = string.replace(/ /g, '-'); 
+
+//replace를 사용하지 말고 한번 함수형으로 구현해 봅시다.
+const replaceChar = (c, ic, rl) => c === ic ? rl : c;
+const reduce = (v, fn, init) => v instanceof Array ? v.reduce(fn, init) : Array.prototype.reduce.call(v, fn, init);
+const replaceString = (str, replaceChar) => reduce(str, (out, char) => out + replaceChar(char,' ', '-'), '');
+
 const urlFriendly2 = replaceString(string, replaceChar); 
 
 console.log(urlFriendly);
@@ -92,8 +99,8 @@ console.log(urlFriendly2);
 ### 불변성(immutable)
 
 * 파라미터로 들어온 값을 변형하는 것이 아니고 새로운 값을 생성해서 리턴한다.
-```javascript
 
+```javascript
 // 불변성이 성립되지 않는 예
 let color_lawn = {
     title: '잔디',
