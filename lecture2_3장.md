@@ -138,7 +138,7 @@ const addColor = (title, colors) => {
     return colors;
 };
 
-console.log(addColor('test', colors).length);   //4
+console.log(addColor('test', colorArray).length);   //4
 console.log(colorArray.length);                 //4
 
 // 불변성이 성립되는 예
@@ -147,8 +147,8 @@ const addColor2 = (title, colors) => colors.concat([{title}];
 // ES2015+
 const addColor3 = (title, colors) => [...colors, {title}];
 
-console.log(addColor2('test', colors).length);   //5
-console.log(addColor3('test', colors).length);   //5
+console.log(addColor2('test', colorArray).length);   //5
+console.log(addColor3('test', colorArray).length);   //5
 console.log(colorArray.length);                 //4
 ```
 
