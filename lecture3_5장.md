@@ -90,7 +90,7 @@ const element = <h1>Hello, world!</h1>;
 * 하지만 모든 브라우저에서 아직 es2015+를 지원하지 않고 있기 때문에 es2015+를 직접 사용할 수 없음
 * 그래서 현재 거의 모든 브라우저에서 지원하는 es5 버전으로 transpiling 해줄 도구가 필요하게 됨
 * 바벨은 위의 기능을 해주는 도구
-* [예제 소스 링크](lecture3.html)
+* [예제 소스 링크](https://github.com/killerdong/react-study/blob/master/lecture3.html)
 
 ## 웹팩
 
@@ -113,7 +113,7 @@ const element = <h1>Hello, world!</h1>;
     * 속도
         * 일관성있는 소스를 하나로 묶으면 대기 시간이 없기 때문에 속도가 빨라짐
     * 일관성
-* [예제 소스 링크](lecture3-1.html)
+* [예제 소스 링크](https://github.com/killerdong/react-study/tree/master/lecture3_webpack)
 
 ## create-react-app
 
