@@ -247,15 +247,15 @@ propTypes: {
 * 사용자는 애플리케이션과 상호 작용을 함
 * 자바 객체 형태로 표현
 
-[소스링크](lecture3_6)
+[소스링크](https://github.com/killerdong/react-study/tree/master/lecture3_6)
 
 ## 6.3.1 컴포넌트 상태 소개
 
-* 소스 참조
+* [소스링크](https://github.com/killerdong/react-study/tree/master/lecture3_6_2)
 
 ## 6.3.2 프로퍼티로부터 상태 초기화하기
 
-* 소스 참조
+* [소스링크](https://github.com/killerdong/react-study/tree/master/lecture3_6_2)
 
 # 6.4 컴포넌트 트리 안의 상태
 
