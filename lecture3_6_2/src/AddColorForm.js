@@ -8,7 +8,7 @@ export default class extends Component {
     }
 
     _submit(e) {
-        const {_title, _color} = this.refs;
+        const {_title, _color} = this;
         e.preventDefault();
         //alert(`새로운 색: ${_title.value} ${_color.value}`);
         this.props.onNewColor(_title.value, _color.value);
@@ -20,8 +20,8 @@ export default class extends Component {
     render() {
         return (
             <form onSubmit={this._submit}>
-                <input type="text" placeholder="색 이름..." required ref="_title" />
-                <input type="color" required ref="_color" />
+                <input type="text" placeholder="색 이름..." required ref="input => this._title = input" />
+                <input type="color" required ref="input => this._color = input" />
                 <button>추가</button>
             </form>
         );
