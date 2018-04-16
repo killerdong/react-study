@@ -2,7 +2,6 @@ import C from './actions/constants';
 import colorReducer from './reducers/colorReducer';
 import deepFreeze from 'deep-freeze';
 
-
 describe('color 리듀서', () => {
     it('ADD_COLOR 성공', () => {
         const state = {};

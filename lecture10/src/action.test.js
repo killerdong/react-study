@@ -27,7 +27,7 @@ describe('addColor', () => {
         store.dispatch(addColor('어두운 파랑', '#000033'));
     });
 
-    it("should add a new color", () => expect(store.getState().colors.length).toBe(3));
+    it("should add a new color", () => expect(store.getState().colors.length).toBe(2));
     it("should add a unigue guid id", () => expect(store.getState().colors[2].id.length).toBe(36));
     it("should set the rating to 0", () => expect(store.getState().colors[2].rating).toBe(0));
     //toBeDefined는 해당 값이 설정되어 있는 경우
