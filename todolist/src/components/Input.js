@@ -1,19 +1,24 @@
 import React, {Fragment} from 'react';
-//import { TodosContext } from '../context/Todos';
 
-export default props => {
+import {TodosContext} from '../context/Todos';
+
+export default () => {
     let todo;
 
-    // return (<Fragment>
-    //     <input type="text" placeholder="할일을 입력하세요." ref={input => todo = input}  />
-    //     <TodosContext.Consumer>
-    //         {todos => <button onClick={clickEventHandler(todos)}>등록하기</button>}
-    //     </TodosContext.Consumer>
-    // </Fragment>);
+    const keyDown = (e, eventHandler) => {
+        if (e.keyCode === 13) {
+            eventHandler(todo.value);
+        }
+    }
 
     return (<Fragment>
-        <input type="text" placeholder="할일을 입력하세요." ref={input => todo = input}  />
-        <button onClick={e => props.addTodos(todo.value)}>등록하기</button>
+        <TodosContext.Consumer>
+            {({clickEventHandler}) =>
+                <Fragment>
+                    <input type="text" placeholder="할일을 입력하세요." ref={input => todo = input} onKeyDown={e => keyDown(e, clickEventHandler)} />
+                    <button onClick={e => clickEventHandler(todo.value)}>등록하기</button>
+                </Fragment>}
+        </TodosContext.Consumer>
     </Fragment>);
 
 };
